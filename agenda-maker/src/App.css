@@ -42,8 +42,8 @@
 }
 
 .agenda-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   margin: 2rem 0;
   padding: 2rem;
@@ -54,14 +54,11 @@
   border: 1px solid #ddd;
 }
 
-/* .add-agenda-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 2rem 0;
-  padding: 2rem;
+.agenda-topics {
   border: 1px solid #ddd;
-} */
+  padding: 1rem;
+  margin: 1rem;
+}
 
 .add-agenda-container {
   max-width: 800px;

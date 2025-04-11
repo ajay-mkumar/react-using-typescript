@@ -3,14 +3,9 @@ import AgendaProps, { Agenda } from "../models/AgendaProps";
 
 
 
-function AddAgenda({ handleToggle, setAgenda }: AgendaProps): JSX.Element {
+function AddAgenda({ handleToggle, agenda, setAgenda, setStoredAgenda }: AgendaProps): JSX.Element {
 
-    //new agenda data
-    const [newAgenda, setNewAgenda] = useState<Agenda>({
-        title: "",
-        topics: [],
-        description: "",
-    });
+    const [newAgenda, setNewAgenda] = useState<Agenda>({ title: '', topics: [], description: '' });
 
     //new topic
     const [newTopic, setNewTopic] = useState<string>('');
@@ -35,7 +30,11 @@ function AddAgenda({ handleToggle, setAgenda }: AgendaProps): JSX.Element {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setAgenda!((prevAgenda) => [...prevAgenda, newAgenda]);
+
+        const updatedAgenda = [...agenda!, newAgenda];
+        setAgenda!(updatedAgenda);
+        setStoredAgenda!(updatedAgenda);
+        
         setNewAgenda({
             title: "",
             topics: [],
