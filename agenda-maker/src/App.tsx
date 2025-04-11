@@ -17,6 +17,15 @@ function App() {
         "Topic 3"
       ],
       description: "This is the agenda description."
+    },
+    {
+      title: "Agenda Title2",
+      topics: [
+        "Topic 1",
+        "Topic 2",
+        "Topic 3"
+      ],
+      description: "This is the agenda2 description."
     }
   ])
 

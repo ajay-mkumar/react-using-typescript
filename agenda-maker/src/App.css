@@ -40,3 +40,86 @@
 .read-the-docs {
   color: #888;
 }
+
+.agenda-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.agenda-list {
+  flex: 1;
+  border: 1px solid #ddd;
+}
+
+/* .add-agenda-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid #ddd;
+} */
+
+.add-agenda-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.agenda-form form{
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem;   */
+}
+
+.agenda-form input {
+  margin: 10px 100px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+}
+
+.agenda-form #topics-container {
+  display: flex;
+}
+
+.agenda-form #topics-container input {
+  margin: 10px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+}
+
+.agenda-form #topics-container button {
+  margin: 10px;
+  width: 50%;
+  padding: 1rem;
+}
+
+.agenda-form form .submitbtn {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 100px;
+  width: 50%;
+}
+
+.added-topics {
+  border: 1px solid #ddd;
+}
+
+.added-topics ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.added-topics ul li {
+  margin: 10px;
+  background-color: wheat;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  list-style: none;
+}
